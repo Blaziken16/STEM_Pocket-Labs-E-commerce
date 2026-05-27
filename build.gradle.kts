@@ -35,6 +35,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-kotlin-datetime:0.61.0")
     implementation("org.mindrot:jbcrypt:0.4")
     implementation("org.jetbrains.exposed:exposed-java-time:0.61.0")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 
     testImplementation(kotlin("test"))
     testImplementation(ktorLibs.server.testHost)
