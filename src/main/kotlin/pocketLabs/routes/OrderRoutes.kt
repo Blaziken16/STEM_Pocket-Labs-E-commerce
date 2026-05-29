@@ -18,7 +18,7 @@ import io.ktor.server.routing.route
 
 fun Route.orderRoutes() {
     authenticate("auth-jwt") {
-        route("/order") {
+        route("/orders") {
             post{
                 val principal = call.principal<JWTPrincipal>()
                 val userId = principal?.userId()

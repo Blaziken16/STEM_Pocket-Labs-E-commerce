@@ -132,6 +132,10 @@ object OrderRepository{
         return transaction {
             val updated = OrderTable.update({ OrderTable.id eq orderId }) {
                 it[orderStatus] = newStatus
+
+                if (newStatus == "DELIVERED") {
+                    it[paymentStatus] = "SUCCESSFUL"
+                }
             }
             updated > 0
         }
